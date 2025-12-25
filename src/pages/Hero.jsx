@@ -25,12 +25,12 @@ function Hero() {
   // Intersection observer
   const { ref: inViewRef, inView } = useInView({
     triggerOnce: false, // supaya bisa toggle warnanya saat scroll
-    threshold: 0.1,
+    threshold: 0.4,
   });
 
   // Background color logic — ditempatkan SETELAH inView terdefinisi
-  const backgroundColor = inView ? "#fffbee" : "#000000";
-  const textColor = inView ? "#000000" : "#fffbee";
+  const backgroundColor = inView ? "#fffbee" : "#0e0e0e";
+  const textColor = inView ? "#0e0e0e" : "#0e0e0e";
 
   // Gabungkan kedua ref
   const setRefs = (el) => {
@@ -107,22 +107,22 @@ function Hero() {
             {/* Kolom kanan (tumpuk di mobile, sejajar di desktop) */}
             <div className="flex flex-col md:flex-row md:justify-between gap-4 md:gap-6 w-full">
               <div>
-                <p className="text-gray-800 font-semibold">Availability:</p>
+                <p className="font-semibold">Availability:</p>
                 <p>Anytime</p>
               </div>
 
               <div>
-                <p className="text-gray-800 font-semibold">Email:</p>
+                <p className="font-semibold">Email:</p>
                 <p>rayhanzz772@gmail.com</p>
               </div>
 
               <div>
-                <p className="text-gray-800 font-semibold">Current location:</p>
+                <p className="font-semibold">Current location:</p>
                 <p>Semarang, Indonesia</p>
               </div>
 
               <div>
-                <p className="text-gray-800 font-semibold">Instagram:</p>
+                <p className="font-semibold">Instagram:</p>
                 <p>@rayhan.maul</p>
               </div>
             </div>

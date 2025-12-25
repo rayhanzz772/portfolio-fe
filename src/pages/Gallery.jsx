@@ -293,7 +293,7 @@ const Gallery = () => {
       className="relative z-10 bg-gradient-to-b from-[#0e0e0e] via-[#0e0e0e] to-[#0e0e0e]"
     >
       {/* Intro Section - Full Height Centered */}
-      <div className="pt-20 flex items-center justify-center">
+      <div className="min-h-screen flex items-center justify-center">
         <motion.div
           className="w-full max-w-5xl mx-auto px-4 py-20 flex flex-col items-center text-center"
           variants={containerVariants}
@@ -303,36 +303,10 @@ const Gallery = () => {
         >
           {/* Main Text */}
           <motion.div variants={textVariants} className="mb-8">
-            <h1 className="text-3xl sm:text-4xl md:text-3xl lg:text-5xl xl:text-1xl font-mori font-light text-gray-400 leading-tight italic">
-              <span className="text-gray-400 italic">
-                Engineering backend systems
-              </span>
+            <h1 className="text-3xl sm:text-4xl md:text-3xl lg:text-6xl xl:text-5xl font-mori text-gray-400 leading-tight">
+              crafting backend systems that quietly improve everyday
+              <span className="animated-text"> experiences.</span>
             </h1>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-mori font-light text-gray-400 italic leading-tight mt-2">
-              that drive business
-              <span className="text-white font-bold animated-text">
-                {" "}
-                impact.
-              </span>
-            </h1>
-          </motion.div>
-
-          {/* Roles */}
-          <motion.div
-            variants={roleVariants}
-            className="flex flex-wrap items-center justify-center gap-2 md:gap-4 text-sm md:text-base text-gray-400 font-mori"
-          >
-            <span className="hover:text-white transition-colors duration-300">
-              Backend Engineer
-            </span>
-            <span className="text-gray-600">|</span>
-            <span className="hover:text-white transition-colors duration-300">
-              Full Stack Developer
-            </span>
-            <span className="text-gray-600">|</span>
-            <span className="hover:text-white transition-colors duration-300">
-              Tech Enthusiast
-            </span>
           </motion.div>
 
           {/* Scroll Arrow */}
