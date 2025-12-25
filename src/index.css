@@ -4,164 +4,184 @@
 
 ::selection {
   color: rgb(255, 255, 255);
-  background: rgb(155, 24, 255);
+  background: rgb(42, 42, 42);
 }
 
 /* Mori */
 
 @font-face {
-  font-family: 'Mori';
-  src: url('/fonts/Mori/PPMori-ExtraLight.otf') format('opentype');
+  font-family: "Mori";
+  src: url("/fonts/Mori/PPMori-ExtraLight.otf") format("opentype");
   font-weight: 200;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Mori';
-  src: url('/fonts/Mori/PPMori-Regular.otf') format('opentype');
+  font-family: "Mori";
+  src: url("/fonts/Mori/PPMori-Regular.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Mori';
-  src: url('/fonts/Mori/PPMori-SemiBold.otf') format('opentype');
+  font-family: "Mori";
+  src: url("/fonts/Mori/PPMori-SemiBold.otf") format("opentype");
   font-weight: 600;
   font-style: normal;
 }
 
 /* OverusedGrotesk */
 @font-face {
-  font-family: 'Overused Grotesk';
-  src: url('/fonts/OverusedGrotesk/OverusedGrotesk-Black.otf') format('opentype');
+  font-family: "Overused Grotesk";
+  src: url("/fonts/OverusedGrotesk/OverusedGrotesk-Black.otf")
+    format("opentype");
   font-weight: 900;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Overused Grotesk';
-  src: url('/fonts/OverusedGrotesk/OverusedGrotesk-BlackItalic.otf') format('opentype');
+  font-family: "Overused Grotesk";
+  src: url("/fonts/OverusedGrotesk/OverusedGrotesk-BlackItalic.otf")
+    format("opentype");
   font-weight: 900;
   font-style: italic;
 }
 @font-face {
-  font-family: 'Overused Grotesk';
-  src: url('/fonts/OverusedGrotesk/OverusedGrotesk-Bold.otf') format('opentype');
+  font-family: "Overused Grotesk";
+  src: url("/fonts/OverusedGrotesk/OverusedGrotesk-Bold.otf") format("opentype");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Overused Grotesk';
-  src: url('/fonts/OverusedGrotesk/OverusedGrotesk-BoldItalic.otf') format('opentype');
+  font-family: "Overused Grotesk";
+  src: url("/fonts/OverusedGrotesk/OverusedGrotesk-BoldItalic.otf")
+    format("opentype");
   font-weight: 700;
   font-style: italic;
 }
 @font-face {
-  font-family: 'Overused Grotesk';
-  src: url('/fonts/OverusedGrotesk/OverusedGrotesk-Book.otf') format('opentype');
+  font-family: "Overused Grotesk";
+  src: url("/fonts/OverusedGrotesk/OverusedGrotesk-Book.otf") format("opentype");
   font-weight: 450;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Overused Grotesk';
-  src: url('/fonts/OverusedGrotesk/OverusedGrotesk-BookItalic.otf') format('opentype');
+  font-family: "Overused Grotesk";
+  src: url("/fonts/OverusedGrotesk/OverusedGrotesk-BookItalic.otf")
+    format("opentype");
   font-weight: 450;
   font-style: italic;
 }
 @font-face {
-  font-family: 'Overused Grotesk';
-  src: url('/fonts/OverusedGrotesk/OverusedGrotesk-ExtraBold.otf') format('opentype');
+  font-family: "Overused Grotesk";
+  src: url("/fonts/OverusedGrotesk/OverusedGrotesk-ExtraBold.otf")
+    format("opentype");
   font-weight: 800;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Overused Grotesk';
-  src: url('/fonts/OverusedGrotesk/OverusedGrotesk-ExtraBoldItalic.otf') format('opentype');
+  font-family: "Overused Grotesk";
+  src: url("/fonts/OverusedGrotesk/OverusedGrotesk-ExtraBoldItalic.otf")
+    format("opentype");
   font-weight: 800;
   font-style: italic;
 }
 @font-face {
-  font-family: 'Overused Grotesk';
-  src: url('/fonts/OverusedGrotesk/OverusedGrotesk-Italic.otf') format('opentype');
+  font-family: "Overused Grotesk";
+  src: url("/fonts/OverusedGrotesk/OverusedGrotesk-Italic.otf")
+    format("opentype");
   font-weight: 400;
   font-style: italic;
 }
 @font-face {
-  font-family: 'Overused Grotesk';
-  src: url('/fonts/OverusedGrotesk/OverusedGrotesk-Light.otf') format('opentype');
+  font-family: "Overused Grotesk";
+  src: url("/fonts/OverusedGrotesk/OverusedGrotesk-Light.otf")
+    format("opentype");
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Overused Grotesk';
-  src: url('/fonts/OverusedGrotesk/OverusedGrotesk-LightItalic.otf') format('opentype');
+  font-family: "Overused Grotesk";
+  src: url("/fonts/OverusedGrotesk/OverusedGrotesk-LightItalic.otf")
+    format("opentype");
   font-weight: 300;
   font-style: italic;
 }
 @font-face {
-  font-family: 'Overused Grotesk';
-  src: url('/fonts/OverusedGrotesk/OverusedGrotesk-Medium.otf') format('opentype');
+  font-family: "Overused Grotesk";
+  src: url("/fonts/OverusedGrotesk/OverusedGrotesk-Medium.otf")
+    format("opentype");
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Overused Grotesk';
-  src: url('/fonts/OverusedGrotesk/OverusedGrotesk-MediumItalic.otf') format('opentype');
+  font-family: "Overused Grotesk";
+  src: url("/fonts/OverusedGrotesk/OverusedGrotesk-MediumItalic.otf")
+    format("opentype");
   font-weight: 500;
   font-style: italic;
 }
 @font-face {
-  font-family: 'Overused Grotesk';
-  src: url('/fonts/OverusedGrotesk/OverusedGrotesk-Roman.otf') format('opentype');
+  font-family: "Overused Grotesk";
+  src: url("/fonts/OverusedGrotesk/OverusedGrotesk-Roman.otf")
+    format("opentype");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Overused Grotesk';
-  src: url('/fonts/OverusedGrotesk/OverusedGrotesk-SemiBold.otf') format('opentype');
+  font-family: "Overused Grotesk";
+  src: url("/fonts/OverusedGrotesk/OverusedGrotesk-SemiBold.otf")
+    format("opentype");
   font-weight: 600;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Overused Grotesk';
-  src: url('/fonts/OverusedGrotesk/OverusedGrotesk-SemiBoldItalic.otf') format('opentype');
+  font-family: "Overused Grotesk";
+  src: url("/fonts/OverusedGrotesk/OverusedGrotesk-SemiBoldItalic.otf")
+    format("opentype");
   font-weight: 600;
   font-style: italic;
 }
 
 /* PP Valve */
 @font-face {
-  font-family: 'PP Valve';
-  src: url('/fonts/PPValve/PPValve-PlainMedium-BF676a3861e801f.otf') format('opentype');
+  font-family: "PP Valve";
+  src: url("/fonts/PPValve/PPValve-PlainMedium-BF676a3861e801f.otf")
+    format("opentype");
   font-weight: 400; /* Medium sebagai normal */
   font-style: normal;
 }
 @font-face {
-  font-family: 'PP Valve';
-  src: url('/fonts/PPValve/PPValve-PlainMediumItalic-BF676a3861f0dc5.otf') format('opentype');
+  font-family: "PP Valve";
+  src: url("/fonts/PPValve/PPValve-PlainMediumItalic-BF676a3861f0dc5.otf")
+    format("opentype");
   font-weight: 400;
   font-style: italic;
 }
 @font-face {
-  font-family: 'PP Valve';
-  src: url('/fonts/PPValve/PPValve-PlainExtralight-BF676a3861eda1a.otf') format('opentype');
+  font-family: "PP Valve";
+  src: url("/fonts/PPValve/PPValve-PlainExtralight-BF676a3861eda1a.otf")
+    format("opentype");
   font-weight: 200;
   font-style: normal;
 }
 @font-face {
-  font-family: 'PP Valve';
-  src: url('/fonts/PPValve/PPValve-PlainExtralightItalic-BF676a3861e0ab8.otf') format('opentype');
+  font-family: "PP Valve";
+  src: url("/fonts/PPValve/PPValve-PlainExtralightItalic-BF676a3861e0ab8.otf")
+    format("opentype");
   font-weight: 200;
   font-style: italic;
 }
 @font-face {
-  font-family: 'PP Valve';
-  src: url('/fonts/PPValve/PPValve-PlainExtrabold-BF676a3861f0d44.otf') format('opentype');
+  font-family: "PP Valve";
+  src: url("/fonts/PPValve/PPValve-PlainExtrabold-BF676a3861f0d44.otf")
+    format("opentype");
   font-weight: 800;
   font-style: normal;
 }
 @font-face {
-  font-family: 'PP Valve';
-  src: url('/fonts/PPValve/PPValve-PlainExtraboldItalic-BF676a3861db412.otf') format('opentype');
+  font-family: "PP Valve";
+  src: url("/fonts/PPValve/PPValve-PlainExtraboldItalic-BF676a3861db412.otf")
+    format("opentype");
   font-weight: 800;
   font-style: italic;
 }
@@ -169,113 +189,121 @@
 /* Helvetice NEUE */
 /* Helvetica Neue - Black */
 @font-face {
-  font-family: 'Helvetica Neue';
-  src: url('/fonts/HelveticaNeue/HelveticaNeueBlack.otf') format('opentype');
+  font-family: "Helvetica Neue";
+  src: url("/fonts/HelveticaNeue/HelveticaNeueBlack.otf") format("opentype");
   font-weight: 900;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Helvetica Neue';
-  src: url('/fonts/HelveticaNeue/HelveticaNeueBlackItalic.otf') format('opentype');
+  font-family: "Helvetica Neue";
+  src: url("/fonts/HelveticaNeue/HelveticaNeueBlackItalic.otf")
+    format("opentype");
   font-weight: 900;
   font-style: italic;
 }
 
 /* Bold */
 @font-face {
-  font-family: 'Helvetica Neue';
-  src: url('/fonts/HelveticaNeue/HelveticaNeueBold.otf') format('opentype');
+  font-family: "Helvetica Neue";
+  src: url("/fonts/HelveticaNeue/HelveticaNeueBold.otf") format("opentype");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Helvetica Neue';
-  src: url('/fonts/HelveticaNeue/HelveticaNeueBoldItalic.otf') format('opentype');
+  font-family: "Helvetica Neue";
+  src: url("/fonts/HelveticaNeue/HelveticaNeueBoldItalic.otf")
+    format("opentype");
   font-weight: 700;
   font-style: italic;
 }
 
 /* Heavy (800) */
 @font-face {
-  font-family: 'Helvetica Neue';
-  src: url('/fonts/HelveticaNeue/HelveticaNeueHeavy.otf') format('opentype');
+  font-family: "Helvetica Neue";
+  src: url("/fonts/HelveticaNeue/HelveticaNeueHeavy.otf") format("opentype");
   font-weight: 800;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Helvetica Neue';
-  src: url('/fonts/HelveticaNeue/HelveticaNeueHeavyItalic.otf') format('opentype');
+  font-family: "Helvetica Neue";
+  src: url("/fonts/HelveticaNeue/HelveticaNeueHeavyItalic.otf")
+    format("opentype");
   font-weight: 800;
   font-style: italic;
 }
 
 /* Light */
 @font-face {
-  font-family: 'Helvetica Neue';
-  src: url('/fonts/HelveticaNeue/HelveticaNeueLight.otf') format('opentype');
+  font-family: "Helvetica Neue";
+  src: url("/fonts/HelveticaNeue/HelveticaNeueLight.otf") format("opentype");
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Helvetica Neue';
-  src: url('/fonts/HelveticaNeue/HelveticaNeueLightItalic.otf') format('opentype');
+  font-family: "Helvetica Neue";
+  src: url("/fonts/HelveticaNeue/HelveticaNeueLightItalic.otf")
+    format("opentype");
   font-weight: 300;
   font-style: italic;
 }
 
 /* Medium (500) */
 @font-face {
-  font-family: 'Helvetica Neue';
-  src: url('/fonts/HelveticaNeue/HelveticaNeueMedium.otf') format('opentype');
+  font-family: "Helvetica Neue";
+  src: url("/fonts/HelveticaNeue/HelveticaNeueMedium.otf") format("opentype");
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Helvetica Neue';
-  src: url('/fonts/HelveticaNeue/HelveticaNeueMediumItalic.otf') format('opentype');
+  font-family: "Helvetica Neue";
+  src: url("/fonts/HelveticaNeue/HelveticaNeueMediumItalic.otf")
+    format("opentype");
   font-weight: 500;
   font-style: italic;
 }
 
 /* Roman (Regular) */
 @font-face {
-  font-family: 'Helvetica Neue';
-  src: url('/fonts/HelveticaNeue/HelveticaNeueRoman.otf') format('opentype');
+  font-family: "Helvetica Neue";
+  src: url("/fonts/HelveticaNeue/HelveticaNeueRoman.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
 }
 
 /* Italic (Regular) */
 @font-face {
-  font-family: 'Helvetica Neue';
-  src: url('/fonts/HelveticaNeue/HelveticaNeueItalic.ttf') format('truetype');
+  font-family: "Helvetica Neue";
+  src: url("/fonts/HelveticaNeue/HelveticaNeueItalic.ttf") format("truetype");
   font-weight: 400;
   font-style: italic;
 }
 
 /* Thin */
 @font-face {
-  font-family: 'Helvetica Neue';
-  src: url('/fonts/HelveticaNeue/HelveticaNeueThin.otf') format('opentype');
+  font-family: "Helvetica Neue";
+  src: url("/fonts/HelveticaNeue/HelveticaNeueThin.otf") format("opentype");
   font-weight: 100;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Helvetica Neue';
-  src: url('/fonts/HelveticaNeue/HelveticaNeueThinItalic.otf') format('opentype');
+  font-family: "Helvetica Neue";
+  src: url("/fonts/HelveticaNeue/HelveticaNeueThinItalic.otf")
+    format("opentype");
   font-weight: 100;
   font-style: italic;
 }
 
-
-
-
 @keyframes gradient-move {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
-
 
 /* Styling untuk kursor kustom */
 .custom-cursor {
@@ -303,17 +331,21 @@
 .animated-text {
   background: linear-gradient(270deg, #ff00ff, #00ffff, #ffff00, #ff00ff);
   background-size: 600% 600%;
-  
+
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
   animation: gradientShift 5s ease infinite;
 }
 
-
-
 @keyframes gradientShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }

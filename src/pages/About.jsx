@@ -1,119 +1,129 @@
-import React, { useRef, useState, useEffect } from "react";
-import TextReveal from '../components/TextReveal';
+import React, { useRef, useState } from "react";
+import TextReveal from "../components/TextReveal";
 import { motion } from "framer-motion";
-import { LayoutGroup } from "framer-motion";
-import saya from '/photos/saya.jpg';
-import { ArrowDownIcon } from '@heroicons/react/24/outline';
-import { Link } from "react-router-dom";
-import { useNavigate } from 'react-router-dom';
-
+import { ArrowDownIcon } from "@heroicons/react/24/outline";
+import { useNavigate } from "react-router-dom";
+import { useInView } from "react-intersection-observer";
 
 const About = () => {
   const containerRef = useRef(null);
-  const [viewportHeight, setViewportHeight] = useState(0);
-
   const [isExiting, setIsExiting] = useState(false);
   const navigate = useNavigate();
+
+  // Trigger transition only when fully in view
+  const { ref: inViewRef, inView } = useInView({
+    threshold: 0.96, // 100% of element must be visible
+    triggerOnce: false,
+  });
+
+  // Combine refs
+  const setRefs = (el) => {
+    containerRef.current = el;
+    inViewRef(el);
+  };
+
+  // Background transitions from black to white when fully in view
+  const backgroundColor = inView ? "#ffffff" : "#0e0e0e";
+  const textColor = inView ? "#0e0e0e" : "#ffffff";
+  const grayTextColor = inView ? "#6b7280" : "#9ca3af";
 
   const handleTransition = () => {
     setIsExiting(true);
     setTimeout(() => {
-      navigate('/portfolio'); // halaman tujuan
-    }, 600); // delay sesuai durasi animasi
+      navigate("/portfolio");
+    }, 600);
   };
-
-  useEffect(() => {
-    setViewportHeight(window.innerHeight);
-  }, []);
 
   return (
     <motion.section
-      ref={containerRef}
-      transition={{ duration: 0.8, ease: "easeInOut" }}
-      viewport={{ once: false, amount: 0.5 }}
-      className="relative z-10 min-h-screen bg-[#ffffff] text-[#0e0e0e] transition-colors duration-500"
+      ref={setRefs}
+      className="relative z-10 min-h-screen flex items-center justify-center"
+      style={{
+        backgroundColor,
+        color: textColor,
+        transition: "background-color 0.8s ease, color 0.8s ease",
+      }}
     >
-
-
-      <article className="w-full snap">
-
-        <LayoutGroup>
-          <div className="min-h-screen w-full mx-auto px-2 flex py-20 lg:pb-10 lg:pt-20">
-            <main
-              className="flex flex-col py-6 md:py-10 w-full h-full"
-              style={{ fontFamily: 'Mori, Arial, sans-serif' }}
+      <div className="w-full max-w-5xl mx-auto px-4 py-20 flex flex-col items-center text-center">
+        <main
+          className="flex flex-col items-center justify-center w-full"
+          style={{ fontFamily: "Mori, Arial, sans-serif" }}
+        >
+          {/* Section Label */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: false }}
+            className="mb-8"
+          >
+            <h2
+              className="text-sm lg:text-lg tracking-widest uppercase transition-colors duration-800"
+              style={{ color: grayTextColor }}
             >
-              <div className="max-w-7xl w-full mx-auto px-4 flex flex-col">
+              <span
+                className="inline-block w-2 h-2 mr-3 transition-colors duration-800"
+                style={{ backgroundColor: textColor }}
+              ></span>
+              About Me
+            </h2>
+          </motion.div>
 
-                  <h1 className="text-sm lg:text-2xl">
-                    <span className="bg-black p-2 w-2 aspect-square inline-block mr-2"></span>  About Me
-                  </h1>
+          {/* Main Text */}
+          <TextReveal className="max-w-4xl">
+            <h1
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-light leading-tight text-center transition-colors duration-800"
+              style={{ color: textColor }}
+            >
+              With over a year of <span className="font-bold">experience</span>{" "}
+              building scalable backend systems, I{" "}
+              <span className="font-bold">focus on</span> designing robust APIs,
+              secure data flows, and reliable{" "}
+              <span className="font-bold">server-side architectures</span>.
+            </h1>
+          </TextReveal>
 
-                  {/* Isi */}
+          {/* Background Text */}
+          <span
+            className="hidden lg:block absolute text-[15vw] xl:text-[20vw] font-extrabold opacity-10 select-none pointer-events-none -z-10 transition-colors duration-800"
+            style={{ color: inView ? "#3b3d41ff" : "#abababff" }}
+          >
+            Experiences.
+          </span>
 
-                  <div className="grid grid-cols-1 md:grid-cols-3 xl:gap-16 gap-6 items-center py-6 lg:py-16">
-                    {/* Gambar: 1/3 */}
-                    <TextReveal className="md:col-span-1">
-                      <img 
-                        src={saya} 
-                        alt="Rayhan's Picture" 
-                        className="w-full h-auto object-cover rounded-lg md:rounded-none"
-                        onError={(e) => {
-                          e.target.onerror = null;
-                          e.target.src = 'https://placehold.co/600x400/e2e8f0/4a5568?text=Gagal+Memuat+Gambar';
-                        }}
-                      />
-                    </TextReveal>
+          {/* Button */}
+          <motion.button
+            onClick={handleTransition}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            viewport={{ once: false }}
+            className="group flex flex-row items-center mt-16 md:mt-24 justify-center gap-2 lg:text-xl transition-colors duration-800"
+            style={{ color: grayTextColor }}
+          >
+            <span
+              className="group-hover:opacity-100"
+              style={{ color: grayTextColor }}
+            >
+              Explore My Projects
+            </span>
+            <ArrowDownIcon
+              className="w-5 h-5 md:w-6 md:h-6 animate-bounce"
+              aria-hidden="true"
+            />
+          </motion.button>
+        </main>
+      </div>
 
-                    {/* Teks: 2/3 */}
-                    <div className="md:col-span-2 flex flex-col justify-center realtive">
-
-                  
-                      <TextReveal>
-                        <h1  className="text-justify md:text-left text-[1.3rem] sm:text-[xl] md:text-[1.6rem] xl:text-[2.6rem] lg:text-[2rem] md:font-bold text-gray-800 leading-tight">
-                        With over a year of experience developing scalable web and mobile applications, I combine my passion for technology with the discipline I’ve built through running and staying active. 
-                        </h1>
-                      </TextReveal>
-                    </div>
-                        <span className="hidden lg:block absolute text-[15vw] xl:text-[20vw] font-extrabold text-gray-300 opacity-20 select-none pointer-events-none -z-10 bottom-0 left-0">
-                          Experiences.
-                        </span>
-                  </div>
-
-                  {/* Akhir Isi */}
-
-                  <button
-                    onClick={handleTransition}
-                    className="group flex flex-row items-center mt-20 justify-center gap-2 lg:text-2xl"
-                  >
-                    <span className="text-gray-400 group-hover:text-black transition-colors">
-                      Explore My Projects
-                    </span>
-                    <ArrowDownIcon
-                      className="w-6 h-6 text-gray-400 group-hover:text-black animate-bounce transition-colors"
-                      aria-hidden="true"
-                    />
-                    <span className="hidden lg:hidden absolute bg-black select-none pointer-events-none -z-9">
-                          Experiences.
-                        </span>
-                  </button>
-
-
-              </div>
-            </main>
-          </div>
-        </LayoutGroup>
-      </article>
       {isExiting && (
-  <motion.div
-    className="fixed inset-0 bg-black z-50"
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    exit={{ opacity: 0 }}
-    transition={{ duration: 0.6 }}
-  />
-)}
-
+        <motion.div
+          className="fixed inset-0 bg-black z-50"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.6 }}
+        />
+      )}
     </motion.section>
   );
 };
