@@ -7,7 +7,7 @@ const projects = [
       "HRIS is a comprehensive web-based application designed to streamline and automate HR processes.",
     date: "2025",
     role: "Backend Developer",
-    tech: "React, Node.js, MongoDB",
+    tech: "React, Express.js, PostgreSQL",
     description:
       "HRIS is a comprehensive web-based application designed to streamline and automate HR processes.",
     designPreview: ["/photos/HRIS/preview_HRIS.png"],
@@ -15,6 +15,24 @@ const projects = [
       "/photos/HRIS/1.jpeg",
       "/photos/HRIS/3.jpeg",
       "/photos/HRIS/2.jpeg",
+    ],
+  },
+  {
+    slug: "web3-notes",
+    name: "Web3 Notes | Decentralized Note-Taking App",
+    type: "Backend Developer",
+    previewText:
+      "Web3 Notes is a decentralized note-taking app built on blockchain technology.",
+    date: "2025",
+    role: "Backend Developer",
+    tech: "Express.js, Solidity, IPFS",
+    description:
+      "Web3 Notes is a decentralized note-taking app built on blockchain technology.",
+    designPreview: ["/photos/Web3Notes/preview_Web3Notes.png"],
+    workImages: [
+      "/photos/web-3/1.jpeg",
+      "/photos/web-3/3.jpeg",
+      "/photos/web-3/2.jpeg",
     ],
   },
   {
