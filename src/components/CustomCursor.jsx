@@ -105,8 +105,8 @@ export default function CustomCursor() {
         ref={cursorOuterRef}
         className="fixed top-0 left-0 z-[9997] pointer-events-none -translate-x-1/2 -translate-y-1/2"
         style={{
-          width: "50px",
-          height: "50px",
+          width: "70px",
+          height: "70px",
           border: "1.7px solid rgba(61, 61, 61, 0.6)",
           borderRadius: "50%",
           backgroundColor: "transparent",
