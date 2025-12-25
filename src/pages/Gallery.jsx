@@ -332,7 +332,7 @@ const Gallery = () => {
       </div>
 
       {/* Skills Section */}
-      <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 md:px-10 py-10 relative">
+      <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 md:px-10 pb-10 relative">
         {/* Fade in gradient overlay at top */}
         <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#0e0e0e] to-transparent pointer-events-none" />
 

@@ -44,7 +44,7 @@ const About = () => {
         transition: "background-color 0.8s ease, color 0.8s ease",
       }}
     >
-      <div className="w-full max-w-5xl mx-auto px-4 py-20 flex flex-col items-center text-center">
+      <div className="w-full max-w-5xl mx-auto px-4 sm:px-6 md:px-8 py-12 sm:py-16 md:py-20 flex flex-col items-center justify-center text-center">
         <main
           className="flex flex-col items-center justify-center w-full"
           style={{ fontFamily: "Mori, Arial, sans-serif" }}
@@ -55,7 +55,7 @@ const About = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: false }}
-            className="mb-8"
+            className="mb-6 sm:mb-8"
           >
             <h2
               className="text-sm lg:text-lg tracking-widest uppercase transition-colors duration-800"
@@ -98,7 +98,7 @@ const About = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
             viewport={{ once: false }}
-            className="group flex flex-row items-center mt-16 md:mt-24 justify-center gap-2 lg:text-xl transition-colors duration-800"
+            className="group flex flex-row items-center mt-12 sm:mt-16 md:mt-24 justify-center gap-2 text-base sm:text-lg lg:text-xl transition-colors duration-800"
             style={{ color: grayTextColor }}
           >
             <span
