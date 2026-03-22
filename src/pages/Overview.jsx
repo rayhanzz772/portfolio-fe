@@ -29,18 +29,22 @@ const Overview = () => {
   const containerRef = useRef(null);
   const [hovered, setHovered] = useState(null);
   const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
-  const [activeTab, setActiveTab] = useState("projects");
+  const [activeTab, setActiveTab] = useState(() => sessionStorage.getItem('portfolioTab') || "projects");
   const data = dataMap[activeTab] || [];
   const [isMenuOpen, setIsMenuOpen] = useState(false);  
-  const [currentPage, setCurrentPage] = useState(1);
-  useEffect(() => {
-    setCurrentPage(1);
-  }, [activeTab]);
+  const [currentPage, setCurrentPage] = useState(() => Number(sessionStorage.getItem('portfolioPage')) || 1);
 
   const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
   const paginatedData = data.slice(startIndex, startIndex + ITEMS_PER_PAGE);
   const totalPages = Math.ceil(data.length / ITEMS_PER_PAGE);
-  const [isCurtainDone, setIsCurtainDone] = useState(false);
+  const isVisited = sessionStorage.getItem('portfolioVisited');
+  const [isCurtainDone, setIsCurtainDone] = useState(!!isVisited);
+
+  useEffect(() => {
+    if (!isVisited) {
+      sessionStorage.setItem('portfolioVisited', 'true');
+    }
+  }, [isVisited]);
 
   const handleMouseMove = (e) => {
     setCursorPos({ x: e.clientX, y: e.clientY });
@@ -57,7 +61,7 @@ const Overview = () => {
 
       <motion.section
         ref={containerRef}
-        initial={{ backgroundColor: "#fffbee", color: "#fffbee" }}
+        initial={isVisited ? false : { backgroundColor: "#fffbee", color: "#fffbee" }}
         animate={{ backgroundColor: "#fffbee", color: "#0e0e0e" }}
         transition={{ duration: 0.5, ease: "easeInOut" }}
         className="relative z-10 min-h-screen overflow-x-hidden font-mori"
@@ -98,7 +102,12 @@ const Overview = () => {
             {Object.keys(dataMap).map((tab) => (
               <button
                 key={tab}
-                onClick={() => setActiveTab(tab)}
+                onClick={() => {
+                  setActiveTab(tab);
+                  setCurrentPage(1);
+                  sessionStorage.setItem('portfolioTab', tab);
+                  sessionStorage.setItem('portfolioPage', 1);
+                }}
                 className={`px-4 py-2 rounded-full text-white transition ${
                   activeTab === tab ? "bg-black" : "bg-gray-500"
                 }`}
@@ -124,6 +133,9 @@ const Overview = () => {
                     key={tab}
                     onClick={() => {
                       setActiveTab(tab);
+                      setCurrentPage(1);
+                      sessionStorage.setItem('portfolioTab', tab);
+                      sessionStorage.setItem('portfolioPage', 1);
                       setIsMenuOpen(false);
                     }}
                     className={`px-4 py-2 rounded-md text-white text-left transition ${
@@ -218,7 +230,10 @@ const Overview = () => {
               {[...Array(totalPages)].map((_, index) => (
                 <button
                   key={index + 1}
-                  onClick={() => setCurrentPage(index + 1)}
+                  onClick={() => {
+                    setCurrentPage(index + 1);
+                    sessionStorage.setItem('portfolioPage', index + 1);
+                  }}
                   className={`w-10 h-10 rounded-full text-sm font-medium transition border-2 ${
                     currentPage === index + 1
                       ? 'bg-black text-white border-black'

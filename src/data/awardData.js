@@ -9,8 +9,8 @@ const awards = [
     by: "IEEEX",
     tech: "Technology",
     description:
-      "Awarded 1st place in a national-level IoT competition held by Universitas Pembangunan Nasional Veteran Jakarta (UPNVJ), under the theme of technology for development. My project focused on the innovative use of Augmented Reality (AR) and Virtual Reality (VR) to accelerate digital transformation in rural areas. The proposal emphasized how AR/VR can enhance education, training, and tourism in villages, making advanced technology more accessible and empowering communities to grow sustainably in the digital era.",
-    designPreview: ["/photos/essayupnvj/prev1.jpeg"],
+      "I am honored to have been selected as one of the 100 participants for the IEEEX Global Student Competition 2025, organized by IEEE Xtreme. This competition brings together talented students from around the world to tackle complex challenges using technology and innovation. It is a valuable opportunity to collaborate, learn, and push the boundaries of what is possible in the field of engineering and computer science.",
+    designPreview: ["/photos/ieeex/prev1.jpeg"],
     workImages: [],
   },
   {
