@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Main Pages -->
+  <url>
+    <loc>https://rayhanprojects.site/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://rayhanprojects.site/portfolio</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Projects -->
+  <url><loc>https://rayhanprojects.site/projects/hris</loc><priority>0.8</priority></url>
+  <url><loc>https://rayhanprojects.site/projects/rasionalisasi-snbp</loc><priority>0.8</priority></url>
+  <url><loc>https://rayhanprojects.site/projects/crypta</loc><priority>0.8</priority></url>
+  <url><loc>https://rayhanprojects.site/projects/cms</loc><priority>0.8</priority></url>
+  <url><loc>https://rayhanprojects.site/projects/whome</loc><priority>0.8</priority></url>
+  <url><loc>https://rayhanprojects.site/projects/kkp</loc><priority>0.8</priority></url>
+  <url><loc>https://rayhanprojects.site/projects/salary-allocator</loc><priority>0.8</priority></url>
+  <url><loc>https://rayhanprojects.site/projects/floodsenseai</loc><priority>0.8</priority></url>
+  <url><loc>https://rayhanprojects.site/projects/bumdesma</loc><priority>0.8</priority></url>
+  <url><loc>https://rayhanprojects.site/projects/sigasi</loc><priority>0.8</priority></url>
+  <url><loc>https://rayhanprojects.site/projects/wecare</loc><priority>0.8</priority></url>
+  <url><loc>https://rayhanprojects.site/projects/sitari</loc><priority>0.8</priority></url>
+  <url><loc>https://rayhanprojects.site/projects/soilai</loc><priority>0.8</priority></url>
+  <url><loc>https://rayhanprojects.site/projects/mentalcare</loc><priority>0.8</priority></url>
+  <url><loc>https://rayhanprojects.site/projects/pmi</loc><priority>0.8</priority></url>
+  <url><loc>https://rayhanprojects.site/projects/mevent</loc><priority>0.8</priority></url>
+  <url><loc>https://rayhanprojects.site/projects/desaged</loc><priority>0.8</priority></url>
+
+  <!-- Certifications -->
+  <url><loc>https://rayhanprojects.site/certifications/appliedml</loc><priority>0.7</priority></url>
+  <url><loc>https://rayhanprojects.site/certifications/mlandroid</loc><priority>0.7</priority></url>
+  <url><loc>https://rayhanprojects.site/certifications/jwdbnsp</loc><priority>0.7</priority></url>
+  <url><loc>https://rayhanprojects.site/certifications/sql</loc><priority>0.7</priority></url>
+
+  <!-- Awards -->
+  <url><loc>https://rayhanprojects.site/awards/goldmedal</loc><priority>0.7</priority></url>
+  <url><loc>https://rayhanprojects.site/awards/essay1st</loc><priority>0.7</priority></url>
+  <url><loc>https://rayhanprojects.site/awards/uiux2nd</loc><priority>0.7</priority></url>
+  <url><loc>https://rayhanprojects.site/awards/soilaipaper</loc><priority>0.7</priority></url>
+</urlset>

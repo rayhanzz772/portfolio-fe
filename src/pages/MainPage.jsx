@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import About from './About';
 import Hero from './Hero';
 import Gallery from './Gallery';
@@ -42,13 +43,29 @@ export default function MainPage() {
 
   return (
     <>
+      <Helmet>
+        <title>Rayhan - Backend Developer | Portfolio</title>
+        <meta name="description" content="I'm Rayhan, a Backend Developer who loves turning ideas into code. I build web and mobile apps that solve real-world problems and enhance user experiences." />
+        <link rel="canonical" href="https://rayhanprojects.site/" />
+        <script type="application/ld+json">{`
+          {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Rayhan",
+            "url": "https://rayhanprojects.site",
+            "jobTitle": "Backend Developer",
+            "description": "Backend Developer who loves turning ideas into code. Building web and mobile apps that solve real-world problems.",
+            "sameAs": []
+          }
+        `}</script>
+      </Helmet>
       <CustomCursor />
       {!isCurtainDone && <CurtainOpening onFinish={() => setIsCurtainDone(true)} />}
-      <div className="relative bg-black overflow-x-hidden">
+      <main className="relative bg-black overflow-x-hidden">
         <Hero />
         <Gallery />
         <About />
-      </div>
+      </main>
     </>
   );
 }

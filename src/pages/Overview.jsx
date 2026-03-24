@@ -1,4 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 import { motion, AnimatePresence } from "framer-motion";
 import Header from "./Header";
 import CustomCursor from '../components/CustomCursor';
@@ -57,6 +58,11 @@ const Overview = () => {
   return (
     <>
       {!isCurtainDone && <CurtainOpening onFinish={() => setIsCurtainDone(true)} />}
+      <Helmet>
+        <title>{activeTab === "projects" ? "Recent Projects" : activeTab === "certifications" ? "Certifications" : "Awards & Research"} | Rayhan Portfolio</title>
+        <meta name="description" content={`Browse Rayhan's ${activeTab} — Backend Developer portfolio showcasing web and mobile development work.`} />
+        <link rel="canonical" href="https://rayhanprojects.site/portfolio" />
+      </Helmet>
       <CustomCursor />
 
       <motion.section

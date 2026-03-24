@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import { useParams, Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { Link as LinkIcon, ArrowLeft as ArrowLeftIcon } from "lucide-react";
 import { motion } from "framer-motion";
 import CustomAnimatedSeparator from "../components/CustomAnimatedSeparator";
@@ -42,7 +43,22 @@ const DetailPage = () => {
     labels = ["Date", "Type", "By"];
   }
 
+  const pageTitle = `${content.name} | Rayhan Portfolio`;
+  const pageDescription = content.description?.slice(0, 160) + "...";
+  const categoryPath = category === "certification" ? "certifications" : category === "award" ? "awards" : "projects";
+  const pageUrl = `https://rayhanprojects.site/${categoryPath}/${slug}`;
+
   return (
+    <>
+    <Helmet>
+      <title>{pageTitle}</title>
+      <meta name="description" content={pageDescription} />
+      <link rel="canonical" href={pageUrl} />
+      <meta property="og:title" content={pageTitle} />
+      <meta property="og:description" content={pageDescription} />
+      <meta property="og:url" content={pageUrl} />
+      <meta property="og:type" content="article" />
+    </Helmet>
     <motion.section
       ref={containerRef}
       className="relative z-10 bg-[#fffbee] text-black font-mori flex items-start justify-end"
@@ -191,6 +207,7 @@ const DetailPage = () => {
         </motion.div>
       </motion.article>
     </motion.section>
+    </>
   );
 };
 
