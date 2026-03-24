@@ -54,7 +54,7 @@ export default function CustomCursor() {
     // Detect hoverable elements (including text)
     const handleElementHover = () => {
       const hoverTargets = document.querySelectorAll(
-        'a, button, [role="button"], input, textarea, select, [data-cursor-hover], label'
+        'a, button, [role="button"], input, textarea, select, [data-cursor-hover], label',
       );
 
       hoverTargets.forEach((el) => {
@@ -100,18 +100,17 @@ export default function CustomCursor() {
 
   return (
     <>
-      {/* Outer ring - smooth follower */}
+      {/* Outer ring - invert color follower */}
       <div
         ref={cursorOuterRef}
         className="fixed top-0 left-0 z-[9997] pointer-events-none -translate-x-1/2 -translate-y-1/2"
         style={{
           width: "70px",
           height: "70px",
-          border: "1.7px solid rgba(61, 61, 61, 0.6)",
           borderRadius: "50%",
-          backgroundColor: "transparent",
-          backdropFilter: "blur(6px)",
-          transition: "border-color 0.3s ease",
+          backgroundColor: "white",
+          mixBlendMode: "difference",
+          transition: "transform 0.1s ease",
         }}
       />
     </>
