@@ -16,6 +16,7 @@ const projects = [
       "/photos/hris/3.png",
       "/photos/hris/2.png",
     ],
+    link: "https://obmc.egoq.lyr.id/",
   },
   {
     slug: "rasionalisasi-snbp",
@@ -34,6 +35,7 @@ const projects = [
       "/photos/rasionalisasi/3.png",
       "/photos/rasionalisasi/2.png",
     ],
+    link: "https://rasionalisasi.rayhanprojects.site",
   },
   {
     slug: "crypta",
@@ -52,6 +54,7 @@ const projects = [
       "/photos/crypta/3.png",
       "/photos/crypta/2.png",
     ],
+    link: "https://crypta.rayhanprojects.site",
   },
   {
     slug: "cms",
@@ -70,6 +73,7 @@ const projects = [
       "/photos/compro/3.png",
       "/photos/compro/2.png",
     ],
+    link: "https://5mez.egoq.lyr.id/",
   },
   {
     slug: "whome",
@@ -88,6 +92,7 @@ const projects = [
       "/photos/whome/3.png",
       "/photos/whome/2.png",
     ],
+    link: "https://ao9k.egoq.lyr.id/",
   },
   {
     slug: "kkp",
@@ -105,6 +110,7 @@ const projects = [
       "/photos/armaform/3.png",
       "/photos/armaform/2.png",
     ],
+    link: "https://armaform.id",
   },
   {
     slug: "salary-allocator",
@@ -119,6 +125,7 @@ const projects = [
       "Salary Allocator is an exceptionally intelligent, real-time salary management application deeply integrated with artificial intelligence and IoT technologies. Spearheading the project as a Backend Developer, I developed the intensive Express.js and PostgreSQL API infrastructure that seamlessly underpins this cross-platform Flutter application, which is successfully adopted by over three regional districts in Central Java. I implemented highly advanced API caching mechanisms and optimized database queries to ensure the platform reliably delivers instantaneous financial alerts, even under periods of heavy administrative load. In addition to core financial computations, I meticulously designed data endpoints that populate a vibrant, visual interactive dashboard for government authorities. This innovative municipal system fundamentally enhances systemic situational awareness, institutional transparency, and immediate operational response coordination.",
     designPreview: ["/photos/saloc/preview_saloc.png"],
     workImages: [],
+    link: "http://salary.rayhanprojects.site/",
   },
   {
     slug: "floodsenseai",
@@ -156,6 +163,7 @@ const projects = [
       "/photos/bumdesma/3.jpeg",
       "/photos/bumdesma/2.jpeg",
     ],
+    link: "https://bumdesmapmp.com",
   },
 
   // Project Name
