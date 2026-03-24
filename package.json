@@ -7,7 +7,6 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "postbuild": "react-snap",
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
@@ -51,44 +50,7 @@
     "gh-pages": "^6.3.0",
     "globals": "^16.0.0",
     "postcss": "^8.5.4",
-    "react-snap": "^1.23.0",
     "tailwindcss": "^3.4.17",
     "vite": "^6.3.5"
-  },
-  "reactSnap": {
-    "include": [
-      "/",
-      "/portfolio",
-      "/projects/hris",
-      "/projects/rasionalisasi-snbp",
-      "/projects/crypta",
-      "/projects/cms",
-      "/projects/whome",
-      "/projects/kkp",
-      "/projects/salary-allocator",
-      "/projects/floodsenseai",
-      "/projects/bumdesma",
-      "/projects/sigasi",
-      "/projects/wecare",
-      "/projects/sitari",
-      "/projects/soilai",
-      "/projects/mentalcare",
-      "/projects/pmi",
-      "/projects/mevent",
-      "/projects/desaged",
-      "/certifications/appliedml",
-      "/certifications/mlandroid",
-      "/certifications/jwdbnsp",
-      "/certifications/sql",
-      "/awards/goldmedal",
-      "/awards/essay1st",
-      "/awards/uiux2nd",
-      "/awards/soilaipaper"
-    ],
-    "source": "dist",
-    "puppeteerArgs": [
-      "--no-sandbox",
-      "--disable-setuid-sandbox"
-    ]
   }
 }
