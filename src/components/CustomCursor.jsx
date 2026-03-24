@@ -100,17 +100,18 @@ export default function CustomCursor() {
 
   return (
     <>
-      {/* Outer ring - invert color follower */}
+      {/* Outer ring - smooth follower */}
       <div
         ref={cursorOuterRef}
         className="fixed top-0 left-0 z-[9997] pointer-events-none -translate-x-1/2 -translate-y-1/2"
         style={{
           width: "70px",
           height: "70px",
+          border: "1.7px solid rgba(61, 61, 61, 0.6)",
           borderRadius: "50%",
-          backgroundColor: "white",
-          mixBlendMode: "difference",
-          transition: "transform 0.1s ease",
+          backgroundColor: "transparent",
+          backdropFilter: "blur(6px)",
+          transition: "border-color 0.3s ease",
         }}
       />
     </>
