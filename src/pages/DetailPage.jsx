@@ -58,6 +58,20 @@ const DetailPage = () => {
       <meta property="og:description" content={pageDescription} />
       <meta property="og:url" content={pageUrl} />
       <meta property="og:type" content="article" />
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": category === 'certification' ? 'EducationalOccupationalCredential' : category === 'award' ? 'CreativeWork' : 'SoftwareSourceCode',
+          "name": content.name,
+          "description": content.description,
+          "url": pageUrl,
+          "dateCreated": content.date,
+          "author": {
+            "@type": "Person",
+            "name": "Rayhan"
+          }
+        })}
+      </script>
     </Helmet>
     <motion.section
       ref={containerRef}
@@ -155,7 +169,8 @@ const DetailPage = () => {
               <img
                 key={i}
                 src={img}
-                alt={content.name}
+                alt={`${content.name} - ${content.type} Project Preview ${i + 1}`}
+                loading="lazy"
                 className={`mx-auto ${
                   [
                     "Android Developer",
@@ -191,7 +206,8 @@ const DetailPage = () => {
                   <img
                     key={i}
                     src={img}
-                    alt={content.name}
+                    alt={`${content.name} - ${content.type} Deep Dive Screenshot ${i + 1}`}
+                    loading="lazy"
                     className="shadow-2xl"
                   />
                 ))}

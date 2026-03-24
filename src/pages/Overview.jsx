@@ -62,6 +62,23 @@ const Overview = () => {
         <title>{activeTab === "projects" ? "Recent Projects" : activeTab === "certifications" ? "Certifications" : "Awards & Research"} | Rayhan Portfolio</title>
         <meta name="description" content={`Browse Rayhan's ${activeTab} — Backend Developer portfolio showcasing web and mobile development work.`} />
         <link rel="canonical" href="https://rayhanprojects.site/portfolio" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            "name": `${activeTab} | Rayhan Portfolio`,
+            "description": `Browse Rayhan's ${activeTab} — Backend Developer portfolio.`,
+            "mainEntity": {
+              "@type": "ItemList",
+              "itemListElement": data.map((item, index) => ({
+                "@type": "ListItem",
+                "position": index + 1,
+                "name": item.name,
+                "url": `https://rayhanprojects.site/${activeTab === 'certifications' ? 'certifications' : activeTab === 'awards' ? 'awards' : 'projects'}/${item.slug}`
+              }))
+            }
+          })}
+        </script>
       </Helmet>
       <CustomCursor />
 

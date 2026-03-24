@@ -54,8 +54,25 @@ export default function MainPage() {
             "name": "Rayhan",
             "url": "https://rayhanprojects.site",
             "jobTitle": "Backend Developer",
-            "description": "Backend Developer who loves turning ideas into code. Building web and mobile apps that solve real-world problems.",
-            "sameAs": []
+            "description": "Backend Developer specializing in Node.js, Express, PostgreSQL, and scalable web architectures.",
+            "knowsAbout": [
+              "Backend Development",
+              "Node.js",
+              "Express.js",
+              "PostgreSQL",
+              "React.js",
+              "RESTful APIs",
+              "Machine Learning",
+              "System Architecture"
+            ],
+            "alumniOf": {
+              "@type": "EducationalOrganization",
+              "name": "Dicoding Academy"
+            },
+            "sameAs": [
+              "https://github.com/rayhanzz772",
+              "https://www.linkedin.com/in/rayhan-izzudien/"
+            ]
           }
         `}</script>
       </Helmet>
