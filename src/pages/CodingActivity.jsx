@@ -18,13 +18,7 @@ import Header from "./Header";
 import CustomCursor from "../components/CustomCursor";
 import { useLenis } from "../hooks/useLenis";
 
-const WAKAPI_BASE_URL = import.meta.env.DEV
-  ? "/api/wakapi"
-  : "https://wakapi.dev";
-
-const ALL_TIME_BREAKDOWN_URL = `${WAKAPI_BASE_URL}/api/compat/wakatime/v1/users/ryz772/stats/all_time`;
-const WAKAPI_API_KEY =
-  import.meta.env.WAKAPI_API_KEY;
+const ALL_TIME_BREAKDOWN_URL = "/api/wakapi?endpoint=stats_all_time";
 const GITHUB_USERNAME = import.meta.env.VITE_GITHUB_USERNAME || "rayhanzz772";
 const HARDCODED_ADDITIONAL_HOURS = 200;
 
@@ -238,7 +232,6 @@ function formatDateRange(startDate, endDate) {
 
 function CodingActivity() {
   useLenis();
-  const apiKeyAuthorization = useMemo(() => WAKAPI_API_KEY, []);
 
   const [allTimeBreakdown, setAllTimeBreakdown] = useState({
     isLoading: true,
@@ -253,10 +246,7 @@ function CodingActivity() {
       try {
         const response = await fetch(ALL_TIME_BREAKDOWN_URL, {
           method: "GET",
-          headers: {
-            Accept: "application/json",
-            Authorization: apiKeyAuthorization,
-          },
+          headers: { Accept: "application/json" },
           signal: controller.signal,
         });
 
@@ -288,7 +278,7 @@ function CodingActivity() {
     fetchAllTimeBreakdown();
 
     return () => controller.abort();
-  }, [apiKeyAuthorization]);
+  }, []);
 
   const allTimeRange = useMemo(() => {
     const start = allTimeBreakdown.data?.start;
