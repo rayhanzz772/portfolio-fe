@@ -22,7 +22,7 @@ const ALL_TIME_BREAKDOWN_URL = import.meta.env.DEV
   ? "/api/wakapi/api/compat/wakatime/v1/users/ryz772/stats/all_time"
   : "/api/wakapi?endpoint=stats_all_time";
 const GITHUB_USERNAME = import.meta.env.VITE_GITHUB_USERNAME || "rayhanzz772";
-const HARDCODED_ADDITIONAL_HOURS = 200;
+const HARDCODED_ADDITIONAL_HOURS = 224;
 
 function formatCompactNumber(value) {
   if (!Number.isFinite(value)) {
