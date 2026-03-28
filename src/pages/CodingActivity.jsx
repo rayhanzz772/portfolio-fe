@@ -18,7 +18,9 @@ import Header from "./Header";
 import CustomCursor from "../components/CustomCursor";
 import { useLenis } from "../hooks/useLenis";
 
-const ALL_TIME_BREAKDOWN_URL = "/api/wakapi?endpoint=stats_all_time";
+const ALL_TIME_BREAKDOWN_URL = import.meta.env.DEV
+  ? "/api/wakapi/api/compat/wakatime/v1/users/ryz772/stats/all_time"
+  : "/api/wakapi?endpoint=stats_all_time";
 const GITHUB_USERNAME = import.meta.env.VITE_GITHUB_USERNAME || "rayhanzz772";
 const HARDCODED_ADDITIONAL_HOURS = 200;
 
@@ -453,24 +455,18 @@ function CodingActivity() {
       >
         <Header theme="light" />
 
-        <div className="mx-auto flex w-full max-w-6xl flex-col px-6 pb-20 pt-32 md:px-10 md:pb-28 md:pt-36">
+        <div className="mx-auto flex w-full max-w-6xl flex-col px-6 pb-20 pt-24 md:px-10 md:pb-28 md:pt-32">
           <motion.header
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
             className="max-w-3xl"
           >
-            <p className="text-xs uppercase tracking-[0.28em] text-black/45">
-              Coding Activity
-            </p>
             <h1 className="mt-5 text-[2.5rem] font-medium leading-[0.95] sm:text-[3.2rem] md:text-[4.5rem]">
               Coding Activity
             </h1>
             <p className="mt-5 max-w-2xl text-base text-black/70 md:text-lg">
               A glimpse into my coding consistency and habits
-            </p>
-            <p className="mt-3 text-xs uppercase tracking-[0.16em] text-black/45 md:text-sm">
-              Data source: tracked via Wakapi + estimated
             </p>
           </motion.header>
 
@@ -605,8 +601,16 @@ function CodingActivity() {
                     }}
                   />
                 </div>
+                
               </div>
+              
             </motion.article>
+
+            <footer className="mt-6 pb-2 text-center">
+              <p className="text-xs uppercase tracking-[0.16em] text-black/45 md:text-sm">
+                Data source: tracked via Wakapi + estimated
+              </p>
+            </footer>
           </motion.section>
         </div>
       </motion.section>
