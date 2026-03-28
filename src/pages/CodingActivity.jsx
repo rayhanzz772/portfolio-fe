@@ -448,14 +448,11 @@ function CodingActivity() {
       <CustomCursor />
 
       <motion.section
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
         className="min-h-screen bg-white font-helvetica text-black"
       >
         <Header theme="light" />
 
-        <div className="mx-auto flex w-full max-w-6xl flex-col px-6 pb-20 pt-24 md:px-10 md:pb-28 md:pt-32">
+        <div className="mx-auto flex w-full max-w-6xl flex-col px-6 pb-20 pt-20 md:px-10 md:pb-28 md:pt-24">
           <motion.header
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
