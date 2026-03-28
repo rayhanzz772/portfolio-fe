@@ -7,6 +7,12 @@
   background: rgba(0, 0, 0, 1);
 }
 
+#seo-content {
+  position: absolute;
+  left: -9999px;
+}
+
+
 /* Mori */
 
 @font-face {

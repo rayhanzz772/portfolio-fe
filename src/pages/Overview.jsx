@@ -59,13 +59,13 @@ const Overview = () => {
     <>
       {!isCurtainDone && <CurtainOpening onFinish={() => setIsCurtainDone(true)} />}
       <Helmet>
-        <title>{activeTab === "projects" ? "Recent Projects" : activeTab === "certifications" ? "Certifications" : "Awards & Research"} | Rayhan Portfolio</title>
+        <title>{activeTab === "projects" ? "Projects" : activeTab === "certifications" ? "Certifications" : "Awards & Research"} | Rayhan</title>
         <meta name="description" content={`Browse Rayhan's ${activeTab} — Backend Developer portfolio showcasing web and mobile development work.`} />
         <link rel="canonical" href="https://rayhanprojects.site/portfolio" />
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
-          content={`${activeTab === "projects" ? "Recent Projects" : activeTab === "certifications" ? "Certifications" : "Awards & Research"} | Rayhan Portfolio`}
+          content={`${activeTab === "projects" ? "Projects" : activeTab === "certifications" ? "Certifications" : "Awards & Research"} | Rayhan`}
         />
         <meta
           property="og:description"
@@ -76,7 +76,7 @@ const Overview = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content={`${activeTab === "projects" ? "Recent Projects" : activeTab === "certifications" ? "Certifications" : "Awards & Research"} | Rayhan Portfolio`}
+          content={`${activeTab === "projects" ? "Projects" : activeTab === "certifications" ? "Certifications" : "Awards & Research"} | Rayhan`}
         />
         <meta
           name="twitter:description"
