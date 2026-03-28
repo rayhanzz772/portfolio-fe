@@ -54,6 +54,14 @@ const StyledWrapper = styled.div`
   .icon-button:active {
     transform: scale(0.95);
   }
+
+  @media (max-width: 768px) {
+    gap: 12px;
+
+    .icon-button {
+      font-size: 24px;
+    }
+  }
 `;
 
 export default NavbarButton;
