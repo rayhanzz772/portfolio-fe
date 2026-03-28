@@ -33,7 +33,7 @@ return (
     }`}
   >
     <div className="px-6 sm:px-6 md:px-16 mx-auto py-2">
-      <div className="flex items-center justify-between">
+      <div className="grid grid-cols-[auto_1fr_auto] items-center">
         <div>
           <Link to="/">
             <img
@@ -43,7 +43,44 @@ return (
             />
           </Link>
         </div>
-        <NavbarButton $theme={theme} />
+
+        <div className="flex items-center justify-evenly gap-5 md:gap-8">
+          <Link
+            to="/coding-activity"
+            className={`text-xs md:text-sm uppercase tracking-[0.18em] transition-opacity duration-300 hover:opacity-70 relative group ${
+              theme === "dark" ? "text-white" : "text-black"
+            }`}
+          >
+            <span className="transition-transform duration-300 ease-in-out group-hover:translate-x-1">
+              Statistic
+            </span>
+            <span
+              className={`absolute left-0 -bottom-0.5 h-[2px] w-0 transition-all duration-300 ease-in-out group-hover:w-full ${
+                theme === "dark" ? "bg-white" : "bg-black"
+              }`}
+            ></span>
+          </Link>
+
+          <Link
+            to="/portfolio"
+            className={`text-xs md:text-sm uppercase tracking-[0.18em] transition-opacity duration-300 hover:opacity-70 relative group ${
+              theme === "dark" ? "text-white" : "text-black"
+            }`}
+          >
+            <span className="transition-transform duration-300 ease-in-out group-hover:translate-x-1">
+              Projects
+            </span>
+            <span
+              className={`absolute left-0 -bottom-0.5 h-[2px] w-0 transition-all duration-300 ease-in-out group-hover:w-full ${
+                theme === "dark" ? "bg-white" : "bg-black"
+              }`}
+            ></span>
+          </Link>
+        </div>
+
+        <div className="flex items-center justify-end">
+          <NavbarButton $theme={theme} />
+        </div>
       </div>
     </div>
   </header>

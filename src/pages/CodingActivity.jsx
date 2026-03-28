@@ -26,6 +26,7 @@ const ALL_TIME_BREAKDOWN_URL = `${WAKAPI_BASE_URL}/api/compat/wakatime/v1/users/
 const WAKAPI_API_KEY =
   import.meta.env.VITE_WAKAPI_API_KEY || "9f0d9a62-0576-4033-8bd0-607e34e62ba0";
 const GITHUB_USERNAME = import.meta.env.VITE_GITHUB_USERNAME || "rayhanzz772";
+const HARDCODED_ADDITIONAL_HOURS = 200;
 
 function formatCompactNumber(value) {
   if (!Number.isFinite(value)) {
@@ -308,39 +309,61 @@ function CodingActivity() {
       return [];
     }
 
+    const adjustedTotalSeconds =
+      Number(data.total_seconds || 0) + HARDCODED_ADDITIONAL_HOURS * 3600;
+    const trackedDays = Number(data.days_including_holidays || 0);
+    const adjustedDailyAverageSeconds =
+      trackedDays > 0 ? adjustedTotalSeconds / trackedDays : 0;
+
     return [
       {
-        label: "Human Readable Total",
-        value: data.human_readable_total || formatDuration(data.total_seconds),
+        label: "Total Coding Time",
+        value: formatDuration(adjustedTotalSeconds),
       },
       {
         label: "Daily Average",
-        value:
-          data.human_readable_daily_average ||
-          formatDuration(data.daily_average || 0),
+        value: formatDuration(adjustedDailyAverageSeconds),
       },
       {
         label: "Days Tracked",
-        value: formatCompactNumber(data.days_including_holidays),
+        value: formatCompactNumber(trackedDays),
       },
       {
         label: "Total Seconds",
-        value: formatCompactNumber(data.total_seconds),
+        value: formatCompactNumber(adjustedTotalSeconds),
       },
     ];
   }, [allTimeBreakdown.data]);
 
   const topLanguages = useMemo(() => {
-    const list = allTimeBreakdown.data?.languages || [];
+    const extraSeconds = HARDCODED_ADDITIONAL_HOURS * 3600;
+    const list = (allTimeBreakdown.data?.languages || []).map((item) => {
+      const baseSeconds = Number(item?.total_seconds || 0);
+      const isJSX = (item?.name || "").toLowerCase() === "jsx";
+      const adjustedSeconds = isJSX ? baseSeconds + extraSeconds : baseSeconds;
+
+      return {
+        ...item,
+        adjustedSeconds,
+      };
+    });
+
+    const totalAdjustedSeconds = list.reduce(
+      (sum, item) => sum + Number(item.adjustedSeconds || 0),
+      0
+    );
 
     return list
-      .filter((item) => Number(item?.total_seconds) > 0)
-      .sort((a, b) => Number(b.percent || 0) - Number(a.percent || 0))
+      .filter((item) => Number(item.adjustedSeconds) > 0)
+      .sort((a, b) => Number(b.adjustedSeconds || 0) - Number(a.adjustedSeconds || 0))
       .slice(0, 6)
       .map((item) => ({
         name: clampLabel(item.name, 14),
-        percent: Number(item.percent || 0),
-        displayValue: item.text || formatDuration(item.total_seconds),
+        percent:
+          totalAdjustedSeconds > 0
+            ? (Number(item.adjustedSeconds || 0) / totalAdjustedSeconds) * 100
+            : 0,
+        displayValue: formatDuration(Number(item.adjustedSeconds || 0)),
       }));
   }, [allTimeBreakdown.data]);
 
@@ -359,16 +382,34 @@ function CodingActivity() {
   }, [allTimeBreakdown.data]);
 
   const topOperatingSystems = useMemo(() => {
-    const list = allTimeBreakdown.data?.operating_systems || [];
+    const extraSeconds = HARDCODED_ADDITIONAL_HOURS * 3600;
+    const list = (allTimeBreakdown.data?.operating_systems || []).map((item) => {
+      const baseSeconds = Number(item?.total_seconds || 0);
+      const isWindows = (item?.name || "").toLowerCase() === "windows";
+      const adjustedSeconds = isWindows ? baseSeconds + extraSeconds : baseSeconds;
+
+      return {
+        ...item,
+        adjustedSeconds,
+      };
+    });
+
+    const totalAdjustedSeconds = list.reduce(
+      (sum, item) => sum + Number(item.adjustedSeconds || 0),
+      0
+    );
 
     return list
-      .filter((item) => Number(item?.total_seconds) > 0)
-      .sort((a, b) => Number(b.percent || 0) - Number(a.percent || 0))
+      .filter((item) => Number(item.adjustedSeconds) > 0)
+      .sort((a, b) => Number(b.adjustedSeconds || 0) - Number(a.adjustedSeconds || 0))
       .slice(0, 6)
       .map((item) => ({
         name: clampLabel(item.name, 18),
-        percent: Number(item.percent || 0),
-        displayValue: item.text || formatDuration(item.total_seconds),
+        percent:
+          totalAdjustedSeconds > 0
+            ? (Number(item.adjustedSeconds || 0) / totalAdjustedSeconds) * 100
+            : 0,
+        displayValue: formatDuration(Number(item.adjustedSeconds || 0)),
       }));
   }, [allTimeBreakdown.data]);
 
@@ -437,6 +478,9 @@ function CodingActivity() {
             </h1>
             <p className="mt-5 max-w-2xl text-base text-black/70 md:text-lg">
               A glimpse into my coding consistency and habits
+            </p>
+            <p className="mt-3 text-xs uppercase tracking-[0.16em] text-black/45 md:text-sm">
+              Data source: tracked via Wakapi + estimated
             </p>
           </motion.header>
 

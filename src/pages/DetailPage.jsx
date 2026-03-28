@@ -75,7 +75,7 @@ const DetailPage = () => {
     </Helmet>
     <motion.section
       ref={containerRef}
-      className="relative z-10 bg-[#fffbee] text-black font-mori flex items-start justify-end"
+      className="relative z-10 bg-white text-black font-mori flex items-start justify-end"
       initial="hidden"
       animate="visible"
       variants={staggerContainer}

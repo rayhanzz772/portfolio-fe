@@ -85,7 +85,7 @@ const Overview = () => {
       <motion.section
         ref={containerRef}
         initial={isVisited ? false : { backgroundColor: "#fffbee", color: "#fffbee" }}
-        animate={{ backgroundColor: "#fffbee", color: "#0e0e0e" }}
+        animate={{ backgroundColor: "#ffffff", color: "#0e0e0e" }}
         transition={{ duration: 0.5, ease: "easeInOut" }}
         className="relative z-10 min-h-screen overflow-x-hidden font-mori"
         onMouseMove={handleMouseMove}
