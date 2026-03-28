@@ -11,9 +11,16 @@ import { useLenis } from '../hooks/useLenis';
 
 const TOTAL_LOADING_TIME = 3000;
 const FADE_OUT_DURATION = 200;
+const MAIN_LOADING_SHOWN_KEY = 'mainLoadingShown';
 
 export default function MainPage() {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(() => {
+    if (typeof window === 'undefined') {
+      return true;
+    }
+
+    return localStorage.getItem(MAIN_LOADING_SHOWN_KEY) !== 'true';
+  });
   const [isExiting, setIsExiting] = useState(false);
   const [isCurtainDone, setIsCurtainDone] = useState(false);
   const [isContentVisible, setIsContentVisible] = useState(false);
@@ -21,15 +28,24 @@ export default function MainPage() {
   useLenis();
 
   useEffect(() => {
+    if (!isLoading) {
+      return;
+    }
+
+    let fadeTimeout;
     const timeout = setTimeout(() => {
       setIsExiting(true);
-      setTimeout(() => {
+      fadeTimeout = setTimeout(() => {
+        localStorage.setItem(MAIN_LOADING_SHOWN_KEY, 'true');
         setIsLoading(false);
       }, FADE_OUT_DURATION);
     }, TOTAL_LOADING_TIME);
 
-    return () => clearTimeout(timeout);
-  }, []);
+    return () => {
+      clearTimeout(timeout);
+      clearTimeout(fadeTimeout);
+    };
+  }, [isLoading]);
 
   useEffect(() => {
     if (!isLoading && isCurtainDone) {
