@@ -1,11 +1,12 @@
 // src/App.jsx
+import { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import MainPage from './pages/MainPage';     // <- Hero, About, Gallery
 
-// Projects Page
-import Overview from './pages/Overview';     // <- Halaman Projects
-import DetailPage from './pages/DetailPage';
-import CodingActivity from './pages/CodingActivity';
+const MainPage = lazy(() => import('./pages/MainPage'));
+const Overview = lazy(() => import('./pages/Overview'));
+const DetailPage = lazy(() => import('./pages/DetailPage'));
+const CodingActivity = lazy(() => import('./pages/CodingActivity'));
+const NotFound = lazy(() => import('./pages/NotFound'));
 
 // Certifiactions Page
 
@@ -16,16 +17,19 @@ import CodingActivity from './pages/CodingActivity';
 function App() {
   return (
     <Router>
-      <Routes>
-        <Route path="/" element={<MainPage />} />
-        <Route path="/portfolio" element={<Overview />} />
-        <Route path="/coding-activity" element={<CodingActivity />} />
+      <Suspense fallback={<main className="min-h-screen bg-white" />}>
+        <Routes>
+          <Route path="/" element={<MainPage />} />
+          <Route path="/portfolio" element={<Overview />} />
+          <Route path="/coding-activity" element={<CodingActivity />} />
 
-        {/* Dynamic detail page untuk semua jenis */}
-        <Route path="/projects/:slug" element={<DetailPage />} />
-        <Route path="/certifications/:slug" element={<DetailPage />} />
-        <Route path="/awards/:slug" element={<DetailPage />} />
-      </Routes>
+          {/* Dynamic detail page untuk semua jenis */}
+          <Route path="/projects/:slug" element={<DetailPage />} />
+          <Route path="/certifications/:slug" element={<DetailPage />} />
+          <Route path="/awards/:slug" element={<DetailPage />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Suspense>
     </Router>
   );
 }

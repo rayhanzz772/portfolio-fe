@@ -62,6 +62,27 @@ const Overview = () => {
         <title>{activeTab === "projects" ? "Recent Projects" : activeTab === "certifications" ? "Certifications" : "Awards & Research"} | Rayhan Portfolio</title>
         <meta name="description" content={`Browse Rayhan's ${activeTab} — Backend Developer portfolio showcasing web and mobile development work.`} />
         <link rel="canonical" href="https://rayhanprojects.site/portfolio" />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content={`${activeTab === "projects" ? "Recent Projects" : activeTab === "certifications" ? "Certifications" : "Awards & Research"} | Rayhan Portfolio`}
+        />
+        <meta
+          property="og:description"
+          content={`Browse Rayhan's ${activeTab} portfolio showcasing backend, mobile, and web development work.`}
+        />
+        <meta property="og:url" content="https://rayhanprojects.site/portfolio" />
+        <meta property="og:image" content="https://rayhanprojects.site/og-image.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content={`${activeTab === "projects" ? "Recent Projects" : activeTab === "certifications" ? "Certifications" : "Awards & Research"} | Rayhan Portfolio`}
+        />
+        <meta
+          name="twitter:description"
+          content={`Browse Rayhan's ${activeTab} portfolio showcasing backend, mobile, and web development work.`}
+        />
+        <meta name="twitter:image" content="https://rayhanprojects.site/og-image.png" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",

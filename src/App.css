@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+#seo-content {
+  position: absolute;
+  left: -9999px;
+}
 
 #root {
   max-width: 1280px;

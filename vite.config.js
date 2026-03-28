@@ -24,6 +24,18 @@ export default defineConfig(({ mode }) => {
     },
     build: {
       target: 'es2019',
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            'react-core': ['react', 'react-dom'],
+            'router': ['react-router-dom'],
+            'motion': ['framer-motion', 'motion'],
+            'charts': ['recharts'],
+            'github-calendar': ['react-github-calendar'],
+            'three': ['three', '@react-three/fiber', '@react-three/drei'],
+          },
+        },
+      },
     },
   }
 })

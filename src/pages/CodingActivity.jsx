@@ -443,6 +443,21 @@ function CodingActivity() {
           content="A glimpse into Rayhan's coding consistency and habits, powered by Wakapi."
         />
         <link rel="canonical" href="https://rayhanprojects.site/coding-activity" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Coding Activity | Rayhan Portfolio" />
+        <meta
+          property="og:description"
+          content="Track Rayhan's coding consistency, top languages, projects, and contribution heatmap."
+        />
+        <meta property="og:url" content="https://rayhanprojects.site/coding-activity" />
+        <meta property="og:image" content="https://rayhanprojects.site/og-image.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Coding Activity | Rayhan Portfolio" />
+        <meta
+          name="twitter:description"
+          content="Track Rayhan's coding consistency, top languages, projects, and contribution heatmap."
+        />
+        <meta name="twitter:image" content="https://rayhanprojects.site/og-image.png" />
       </Helmet>
 
       <CustomCursor />
