@@ -24,7 +24,7 @@ const WAKAPI_BASE_URL = import.meta.env.DEV
 
 const ALL_TIME_BREAKDOWN_URL = `${WAKAPI_BASE_URL}/api/compat/wakatime/v1/users/ryz772/stats/all_time`;
 const WAKAPI_API_KEY =
-  import.meta.env.VITE_WAKAPI_API_KEY || "9f0d9a62-0576-4033-8bd0-607e34e62ba0";
+  import.meta.env.WAKAPI_API_KEY;
 const GITHUB_USERNAME = import.meta.env.VITE_GITHUB_USERNAME || "rayhanzz772";
 const HARDCODED_ADDITIONAL_HOURS = 200;
 
