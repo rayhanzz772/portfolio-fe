@@ -442,22 +442,22 @@ function CodingActivity() {
           name="description"
           content="A glimpse into Rayhan's coding consistency and habits, powered by Wakapi."
         />
-        <link rel="canonical" href="https://rayhanprojects.site/coding-activity" />
+        <link rel="canonical" href="https://rayhancreative.web.id/coding-activity" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Coding Activity | Rayhan Portfolio" />
         <meta
           property="og:description"
           content="Track Rayhan's coding consistency, top languages, projects, and contribution heatmap."
         />
-        <meta property="og:url" content="https://rayhanprojects.site/coding-activity" />
-        <meta property="og:image" content="https://rayhanprojects.site/og-image.png" />
+        <meta property="og:url" content="https://rayhancreative.web.id/coding-activity" />
+        <meta property="og:image" content="https://rayhancreative.web.id/og-image.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Coding Activity | Rayhan Portfolio" />
         <meta
           name="twitter:description"
           content="Track Rayhan's coding consistency, top languages, projects, and contribution heatmap."
         />
-        <meta name="twitter:image" content="https://rayhanprojects.site/og-image.png" />
+        <meta name="twitter:image" content="https://rayhancreative.web.id/og-image.png" />
       </Helmet>
 
       <CustomCursor />
@@ -600,22 +600,22 @@ function CodingActivity() {
                     colorScheme="light"
                     showWeekdayLabels
                     theme={{
-                        light: [
+                      light: [
                         "#f5f5f5", // 0 (no activity)
                         "#9e9e9e", // 1 (low)
                         "#4a4a4a", // 2 (medium mulai naik)
                         "#2b2b2b", // 3 (high kontras)
                         "#000000", // 4 (MAX — full hitam 🔥)
-                        ]
+                      ]
                     }}
                     labels={{
                       totalCount: "{{count}} contributions in the last year",
                     }}
                   />
                 </div>
-                
+
               </div>
-              
+
             </motion.article>
 
             <footer className="mt-6 pb-2 text-center">

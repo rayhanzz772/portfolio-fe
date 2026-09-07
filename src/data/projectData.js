@@ -35,7 +35,7 @@ const projects = [
       "/photos/rasionalisasi/3.png",
       "/photos/rasionalisasi/2.png",
     ],
-    link: "https://rasionalisasi.rayhanprojects.site",
+    link: "https://rasionalisasi.rayhancreative.web.id",
   },
   {
     slug: "crypta",
@@ -54,7 +54,7 @@ const projects = [
       "/photos/crypta/3.png",
       "/photos/crypta/2.png",
     ],
-    link: "https://crypta.rayhanprojects.site",
+    link: "https://crypta.rayhancreative.web.id",
   },
   {
     slug: "cms",
@@ -125,7 +125,7 @@ const projects = [
       "Salary Allocator is an exceptionally intelligent, real-time salary management application deeply integrated with artificial intelligence and IoT technologies. Spearheading the project as a Backend Developer, I developed the intensive Express.js and PostgreSQL API infrastructure that seamlessly underpins this cross-platform Flutter application, which is successfully adopted by over three regional districts in Central Java. I implemented highly advanced API caching mechanisms and optimized database queries to ensure the platform reliably delivers instantaneous financial alerts, even under periods of heavy administrative load. In addition to core financial computations, I meticulously designed data endpoints that populate a vibrant, visual interactive dashboard for government authorities. This innovative municipal system fundamentally enhances systemic situational awareness, institutional transparency, and immediate operational response coordination.",
     designPreview: ["/photos/saloc/preview_saloc.png"],
     workImages: [],
-    link: "http://salary.rayhanprojects.site/",
+    link: "http://salary.rayhancreative.web.id/",
   },
   {
     slug: "floodsenseai",

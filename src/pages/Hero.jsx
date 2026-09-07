@@ -81,7 +81,7 @@ function Hero() {
                  lg:text-[5rem] 
                  xl:text-[6.5rem] leading-[0.99] md:leading-[0.95] max-w-[750px] md:max-w-[1300px]"
                   >
-                    Backend Developer.
+                    Software Developer.
                   </h1>
 
                   <button onClick={handleTransition}>

@@ -32,7 +32,7 @@ const Overview = () => {
   const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
   const [activeTab, setActiveTab] = useState(() => sessionStorage.getItem('portfolioTab') || "projects");
   const data = dataMap[activeTab] || [];
-  const [isMenuOpen, setIsMenuOpen] = useState(false);  
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [currentPage, setCurrentPage] = useState(() => Number(sessionStorage.getItem('portfolioPage')) || 1);
 
   const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
@@ -60,8 +60,8 @@ const Overview = () => {
       {!isCurtainDone && <CurtainOpening onFinish={() => setIsCurtainDone(true)} />}
       <Helmet>
         <title>{activeTab === "projects" ? "Projects" : activeTab === "certifications" ? "Certifications" : "Awards & Research"} | Rayhan</title>
-        <meta name="description" content={`Browse Rayhan's ${activeTab} — Backend Developer portfolio showcasing web and mobile development work.`} />
-        <link rel="canonical" href="https://rayhanprojects.site/portfolio" />
+        <meta name="description" content={`Browse Rayhan's ${activeTab} — Software Developer portfolio showcasing web and mobile development work.`} />
+        <link rel="canonical" href="https://rayhancreative.web.id/portfolio" />
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
@@ -69,10 +69,10 @@ const Overview = () => {
         />
         <meta
           property="og:description"
-          content={`Browse Rayhan's ${activeTab} portfolio showcasing backend, mobile, and web development work.`}
+          content={`Browse Rayhan's ${activeTab} portfolio showcasing software, mobile, and web development work.`}
         />
-        <meta property="og:url" content="https://rayhanprojects.site/portfolio" />
-        <meta property="og:image" content="https://rayhanprojects.site/og-image.png" />
+        <meta property="og:url" content="https://rayhancreative.web.id/portfolio" />
+        <meta property="og:image" content="https://rayhancreative.web.id/og-image.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
@@ -82,20 +82,20 @@ const Overview = () => {
           name="twitter:description"
           content={`Browse Rayhan's ${activeTab} portfolio showcasing backend, mobile, and web development work.`}
         />
-        <meta name="twitter:image" content="https://rayhanprojects.site/og-image.png" />
+        <meta name="twitter:image" content="https://rayhancreative.web.id/og-image.png" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "CollectionPage",
             "name": `${activeTab} | Rayhan Portfolio`,
-            "description": `Browse Rayhan's ${activeTab} — Backend Developer portfolio.`,
+            "description": `Browse Rayhan's ${activeTab} — Software Developer portfolio.`,
             "mainEntity": {
               "@type": "ItemList",
               "itemListElement": data.map((item, index) => ({
                 "@type": "ListItem",
                 "position": index + 1,
                 "name": item.name,
-                "url": `https://rayhanprojects.site/${activeTab === 'certifications' ? 'certifications' : activeTab === 'awards' ? 'awards' : 'projects'}/${item.slug}`
+                "url": `https://rayhancreative.web.id/${activeTab === 'certifications' ? 'certifications' : activeTab === 'awards' ? 'awards' : 'projects'}/${item.slug}`
               }))
             }
           })}
@@ -126,73 +126,71 @@ const Overview = () => {
               {activeTab === "projects"
                 ? "Recent Projects"
                 : activeTab === "certifications"
-                ? "Certifications"
-                : "Awards & Researchs"}
+                  ? "Certifications"
+                  : "Awards & Researchs"}
             </motion.h2>
 
-          {/* Toggle button only visible on mobile */}
-          <div className="md:hidden">
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="w-10 h-10 flex items-center justify-center rounded-full bg-black text-white ml-4"
-            >
-              {/* Isi tombol, misalnya ikon menu */}
-              ☰
-            </button>
-          </div>
-
-          {/* Desktop buttons */}
-          <div className="hidden md:flex gap-3">
-            {Object.keys(dataMap).map((tab) => (
+            {/* Toggle button only visible on mobile */}
+            <div className="md:hidden">
               <button
-                key={tab}
-                onClick={() => {
-                  setActiveTab(tab);
-                  setCurrentPage(1);
-                  sessionStorage.setItem('portfolioTab', tab);
-                  sessionStorage.setItem('portfolioPage', 1);
-                }}
-                className={`px-4 py-2 rounded-full text-white transition ${
-                  activeTab === tab ? "bg-black" : "bg-gray-500"
-                }`}
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                className="w-10 h-10 flex items-center justify-center rounded-full bg-black text-white ml-4"
               >
-                {tab.charAt(0).toUpperCase() + tab.slice(1)}
+                {/* Isi tombol, misalnya ikon menu */}
+                ☰
               </button>
-            ))}
-          </div>
+            </div>
 
-          {/* Mobile Dropdown */}
-          <AnimatePresence>
-            {isMenuOpen && (
-              <motion.div
-                ref={menuRef}
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -10 }}
-                transition={{ duration: 0.25 }}
-                className="absolute right-6 top-20 z-50 md:hidden bg-black bg-opacity-80 backdrop-blur-sm rounded-lg p-3 shadow-lg flex flex-col gap-2"
-              >
-                {Object.keys(dataMap).map((tab) => (
-                  <button
-                    key={tab}
-                    onClick={() => {
-                      setActiveTab(tab);
-                      setCurrentPage(1);
-                      sessionStorage.setItem('portfolioTab', tab);
-                      sessionStorage.setItem('portfolioPage', 1);
-                      setIsMenuOpen(false);
-                    }}
-                    className={`px-4 py-2 rounded-md text-white text-left transition ${
-                      activeTab === tab ? "bg-[#0e0e0e] text-black" : "bg-transparent hover:bg-gray-700"
+            {/* Desktop buttons */}
+            <div className="hidden md:flex gap-3">
+              {Object.keys(dataMap).map((tab) => (
+                <button
+                  key={tab}
+                  onClick={() => {
+                    setActiveTab(tab);
+                    setCurrentPage(1);
+                    sessionStorage.setItem('portfolioTab', tab);
+                    sessionStorage.setItem('portfolioPage', 1);
+                  }}
+                  className={`px-4 py-2 rounded-full text-white transition ${activeTab === tab ? "bg-black" : "bg-gray-500"
                     }`}
-                  >
-                    {tab.charAt(0).toUpperCase() + tab.slice(1)}
-                  </button>
-                ))}
-              </motion.div>
-            )}
-          </AnimatePresence>
-            
+                >
+                  {tab.charAt(0).toUpperCase() + tab.slice(1)}
+                </button>
+              ))}
+            </div>
+
+            {/* Mobile Dropdown */}
+            <AnimatePresence>
+              {isMenuOpen && (
+                <motion.div
+                  ref={menuRef}
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  transition={{ duration: 0.25 }}
+                  className="absolute right-6 top-20 z-50 md:hidden bg-black bg-opacity-80 backdrop-blur-sm rounded-lg p-3 shadow-lg flex flex-col gap-2"
+                >
+                  {Object.keys(dataMap).map((tab) => (
+                    <button
+                      key={tab}
+                      onClick={() => {
+                        setActiveTab(tab);
+                        setCurrentPage(1);
+                        sessionStorage.setItem('portfolioTab', tab);
+                        sessionStorage.setItem('portfolioPage', 1);
+                        setIsMenuOpen(false);
+                      }}
+                      className={`px-4 py-2 rounded-md text-white text-left transition ${activeTab === tab ? "bg-[#0e0e0e] text-black" : "bg-transparent hover:bg-gray-700"
+                        }`}
+                    >
+                      {tab.charAt(0).toUpperCase() + tab.slice(1)}
+                    </button>
+                  ))}
+                </motion.div>
+              )}
+            </AnimatePresence>
+
           </div>
 
           <CustomAnimatedSeparator mb={8} h={1} mx={0} />
@@ -211,10 +209,10 @@ const Overview = () => {
                   activeTab === "projects"
                     ? `/projects/${item.slug}`
                     : activeTab === "certifications"
-                    ? `/certifications/${item.slug}`
-                    : activeTab === "awards"
-                    ? `/awards/${item.slug}`
-                    : "#";
+                      ? `/certifications/${item.slug}`
+                      : activeTab === "awards"
+                        ? `/awards/${item.slug}`
+                        : "#";
 
                 return (
                   <motion.li
@@ -269,28 +267,27 @@ const Overview = () => {
             )}
           </AnimatePresence>
         </div>
-          {totalPages > 1 && (
-            <div className="sticky xl:fixed right-0 xl:right-6 bottom-4 xl:top-1/2 transform xl:-translate-y-1/2 flex flex-row justify-center xl:flex-col items-center gap-2 z-50">
-              {[...Array(totalPages)].map((_, index) => (
-                <button
-                  key={index + 1}
-                  onClick={() => {
-                    setCurrentPage(index + 1);
-                    sessionStorage.setItem('portfolioPage', index + 1);
-                  }}
-                  className={`w-10 h-10 rounded-full text-sm font-medium transition border-2 ${
-                    currentPage === index + 1
-                      ? 'bg-black text-white border-black'
-                      : 'bg-white-300 text-black border-gray-500'
+        {totalPages > 1 && (
+          <div className="sticky xl:fixed right-0 xl:right-6 bottom-4 xl:top-1/2 transform xl:-translate-y-1/2 flex flex-row justify-center xl:flex-col items-center gap-2 z-50">
+            {[...Array(totalPages)].map((_, index) => (
+              <button
+                key={index + 1}
+                onClick={() => {
+                  setCurrentPage(index + 1);
+                  sessionStorage.setItem('portfolioPage', index + 1);
+                }}
+                className={`w-10 h-10 rounded-full text-sm font-medium transition border-2 ${currentPage === index + 1
+                  ? 'bg-black text-white border-black'
+                  : 'bg-white-300 text-black border-gray-500'
                   }`}
-                >
-                  {index + 1}
-                </button>
-              ))}
-            </div>
-          )}
+              >
+                {index + 1}
+              </button>
+            ))}
+          </div>
+        )}
       </motion.section>
-      
+
     </>
   );
 };

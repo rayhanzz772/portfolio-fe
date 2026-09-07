@@ -12,7 +12,7 @@ export default function NotFound() {
           content="The page you are looking for could not be found on Rayhan's portfolio."
         />
         <meta name="robots" content="noindex, follow" />
-        <link rel="canonical" href="https://rayhanprojects.site/404" />
+        <link rel="canonical" href="https://rayhancreative.web.id/404" />
       </Helmet>
 
       <div className="mx-auto w-full max-w-3xl">

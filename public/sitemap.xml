@@ -2,52 +2,52 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Main Pages -->
   <url>
-    <loc>https://rayhanprojects.site/</loc>
+    <loc>https://rayhancreative.web.id/</loc>
     <lastmod>2026-03-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://rayhanprojects.site/portfolio</loc>
+    <loc>https://rayhancreative.web.id/portfolio</loc>
     <lastmod>2026-03-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://rayhanprojects.site/coding-activity</loc>
+    <loc>https://rayhancreative.web.id/coding-activity</loc>
     <lastmod>2026-03-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <!-- Projects -->
-  <url><loc>https://rayhanprojects.site/projects/hris</loc><lastmod>2026-03-28</lastmod><priority>0.8</priority></url>
-  <url><loc>https://rayhanprojects.site/projects/rasionalisasi-snbp</loc><lastmod>2026-03-28</lastmod><priority>0.8</priority></url>
-  <url><loc>https://rayhanprojects.site/projects/crypta</loc><lastmod>2026-03-28</lastmod><priority>0.8</priority></url>
-  <url><loc>https://rayhanprojects.site/projects/cms</loc><lastmod>2026-03-28</lastmod><priority>0.8</priority></url>
-  <url><loc>https://rayhanprojects.site/projects/whome</loc><lastmod>2026-03-28</lastmod><priority>0.8</priority></url>
-  <url><loc>https://rayhanprojects.site/projects/kkp</loc><lastmod>2026-03-28</lastmod><priority>0.8</priority></url>
-  <url><loc>https://rayhanprojects.site/projects/salary-allocator</loc><lastmod>2026-03-28</lastmod><priority>0.8</priority></url>
-  <url><loc>https://rayhanprojects.site/projects/floodsenseai</loc><lastmod>2026-03-28</lastmod><priority>0.8</priority></url>
-  <url><loc>https://rayhanprojects.site/projects/bumdesma</loc><lastmod>2026-03-28</lastmod><priority>0.8</priority></url>
-  <url><loc>https://rayhanprojects.site/projects/sigasi</loc><lastmod>2026-03-28</lastmod><priority>0.8</priority></url>
-  <url><loc>https://rayhanprojects.site/projects/wecare</loc><lastmod>2026-03-28</lastmod><priority>0.8</priority></url>
-  <url><loc>https://rayhanprojects.site/projects/sitari</loc><lastmod>2026-03-28</lastmod><priority>0.8</priority></url>
-  <url><loc>https://rayhanprojects.site/projects/soilai</loc><lastmod>2026-03-28</lastmod><priority>0.8</priority></url>
-  <url><loc>https://rayhanprojects.site/projects/mentalcare</loc><lastmod>2026-03-28</lastmod><priority>0.8</priority></url>
-  <url><loc>https://rayhanprojects.site/projects/pmi</loc><lastmod>2026-03-28</lastmod><priority>0.8</priority></url>
-  <url><loc>https://rayhanprojects.site/projects/mevent</loc><lastmod>2026-03-28</lastmod><priority>0.8</priority></url>
-  <url><loc>https://rayhanprojects.site/projects/desaged</loc><lastmod>2026-03-28</lastmod><priority>0.8</priority></url>
+  <url><loc>https://rayhancreative.web.id/projects/hris</loc><lastmod>2026-03-28</lastmod><priority>0.8</priority></url>
+  <url><loc>https://rayhancreative.web.id/projects/rasionalisasi-snbp</loc><lastmod>2026-03-28</lastmod><priority>0.8</priority></url>
+  <url><loc>https://rayhancreative.web.id/projects/crypta</loc><lastmod>2026-03-28</lastmod><priority>0.8</priority></url>
+  <url><loc>https://rayhancreative.web.id/projects/cms</loc><lastmod>2026-03-28</lastmod><priority>0.8</priority></url>
+  <url><loc>https://rayhancreative.web.id/projects/whome</loc><lastmod>2026-03-28</lastmod><priority>0.8</priority></url>
+  <url><loc>https://rayhancreative.web.id/projects/kkp</loc><lastmod>2026-03-28</lastmod><priority>0.8</priority></url>
+  <url><loc>https://rayhancreative.web.id/projects/salary-allocator</loc><lastmod>2026-03-28</lastmod><priority>0.8</priority></url>
+  <url><loc>https://rayhancreative.web.id/projects/floodsenseai</loc><lastmod>2026-03-28</lastmod><priority>0.8</priority></url>
+  <url><loc>https://rayhancreative.web.id/projects/bumdesma</loc><lastmod>2026-03-28</lastmod><priority>0.8</priority></url>
+  <url><loc>https://rayhancreative.web.id/projects/sigasi</loc><lastmod>2026-03-28</lastmod><priority>0.8</priority></url>
+  <url><loc>https://rayhancreative.web.id/projects/wecare</loc><lastmod>2026-03-28</lastmod><priority>0.8</priority></url>
+  <url><loc>https://rayhancreative.web.id/projects/sitari</loc><lastmod>2026-03-28</lastmod><priority>0.8</priority></url>
+  <url><loc>https://rayhancreative.web.id/projects/soilai</loc><lastmod>2026-03-28</lastmod><priority>0.8</priority></url>
+  <url><loc>https://rayhancreative.web.id/projects/mentalcare</loc><lastmod>2026-03-28</lastmod><priority>0.8</priority></url>
+  <url><loc>https://rayhancreative.web.id/projects/pmi</loc><lastmod>2026-03-28</lastmod><priority>0.8</priority></url>
+  <url><loc>https://rayhancreative.web.id/projects/mevent</loc><lastmod>2026-03-28</lastmod><priority>0.8</priority></url>
+  <url><loc>https://rayhancreative.web.id/projects/desaged</loc><lastmod>2026-03-28</lastmod><priority>0.8</priority></url>
 
   <!-- Certifications -->
-  <url><loc>https://rayhanprojects.site/certifications/appliedml</loc><lastmod>2026-03-28</lastmod><priority>0.7</priority></url>
-  <url><loc>https://rayhanprojects.site/certifications/mlandroid</loc><lastmod>2026-03-28</lastmod><priority>0.7</priority></url>
-  <url><loc>https://rayhanprojects.site/certifications/jwdbnsp</loc><lastmod>2026-03-28</lastmod><priority>0.7</priority></url>
-  <url><loc>https://rayhanprojects.site/certifications/sql</loc><lastmod>2026-03-28</lastmod><priority>0.7</priority></url>
+  <url><loc>https://rayhancreative.web.id/certifications/appliedml</loc><lastmod>2026-03-28</lastmod><priority>0.7</priority></url>
+  <url><loc>https://rayhancreative.web.id/certifications/mlandroid</loc><lastmod>2026-03-28</lastmod><priority>0.7</priority></url>
+  <url><loc>https://rayhancreative.web.id/certifications/jwdbnsp</loc><lastmod>2026-03-28</lastmod><priority>0.7</priority></url>
+  <url><loc>https://rayhancreative.web.id/certifications/sql</loc><lastmod>2026-03-28</lastmod><priority>0.7</priority></url>
 
   <!-- Awards -->
-  <url><loc>https://rayhanprojects.site/awards/goldmedal</loc><lastmod>2026-03-28</lastmod><priority>0.7</priority></url>
-  <url><loc>https://rayhanprojects.site/awards/essay1st</loc><lastmod>2026-03-28</lastmod><priority>0.7</priority></url>
-  <url><loc>https://rayhanprojects.site/awards/uiux2nd</loc><lastmod>2026-03-28</lastmod><priority>0.7</priority></url>
-  <url><loc>https://rayhanprojects.site/awards/soilaipaper</loc><lastmod>2026-03-28</lastmod><priority>0.7</priority></url>
+  <url><loc>https://rayhancreative.web.id/awards/goldmedal</loc><lastmod>2026-03-28</lastmod><priority>0.7</priority></url>
+  <url><loc>https://rayhancreative.web.id/awards/essay1st</loc><lastmod>2026-03-28</lastmod><priority>0.7</priority></url>
+  <url><loc>https://rayhancreative.web.id/awards/uiux2nd</loc><lastmod>2026-03-28</lastmod><priority>0.7</priority></url>
+  <url><loc>https://rayhancreative.web.id/awards/soilaipaper</loc><lastmod>2026-03-28</lastmod><priority>0.7</priority></url>
 </urlset>

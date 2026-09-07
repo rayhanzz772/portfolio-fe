@@ -52,7 +52,7 @@ const About = () => {
                   <TextReveal className="md:col-span-1">
                     <img
                       src={saya}
-                      alt="Rayhan - Professional Backend Developer and Web Engineer from Indonesia"
+                      alt="Rayhan - Professional Software Developer and Web Engineer from Indonesia"
                       loading="lazy"
                       className="w-full h-auto object-cover rounded-lg md:rounded-none"
                       onError={(e) => {

@@ -60,19 +60,19 @@ export default function MainPage() {
   return (
     <>
       <Helmet>
-        <title>Rayhan - Backend Developer | Portfolio</title>
-        <meta name="description" content="I'm Rayhan, a Backend Developer who loves turning ideas into code. I build web and mobile apps that solve real-world problems and enhance user experiences." />
-        <link rel="canonical" href="https://rayhanprojects.site/" />
+        <title>Rayhan - Software Developer | Portfolio</title>
+        <meta name="description" content="I'm Rayhan, a Software Developer who loves turning ideas into code. I build web and mobile apps that solve real-world problems and enhance user experiences." />
+        <link rel="canonical" href="https://rayhancreative.web.id/" />
         <script type="application/ld+json">{`
           {
             "@context": "https://schema.org",
             "@type": "Person",
             "name": "Rayhan",
-            "url": "https://rayhanprojects.site",
-            "jobTitle": "Backend Developer",
-            "description": "Backend Developer specializing in Node.js, Express, PostgreSQL, and scalable web architectures.",
+            "url": "https://rayhancreative.web.id",
+            "jobTitle": "Software Developer",
+            "description": "Software Developer specializing in Node.js, Express, PostgreSQL, and scalable web architectures.",
             "knowsAbout": [
-              "Backend Development",
+              "Software Development",
               "Node.js",
               "Express.js",
               "PostgreSQL",
